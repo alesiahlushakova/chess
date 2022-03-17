@@ -51,19 +51,4 @@ class KingMoveStrategyTest {
         //then
         Assertions.assertFalse(actual);
     }
-
-    @Test
-    void canBeMoved_backward_piece_places_test() {
-        //given
-        int x1 = 2;
-        int y1 = 1;
-        int x2 = 1;
-        int y2 = 1;
-
-        //when
-        boolean actual = strategy.canBeMoved(x1, y1, x2, y2);
-
-        //then
-        Assertions.assertFalse(actual);
-    }
 }

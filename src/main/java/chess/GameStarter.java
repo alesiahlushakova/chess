@@ -3,7 +3,7 @@ package chess;
 import chess.service.GameService;
 import chess.service.impl.GameServiceImpl;
 
-public class Main {
+public class GameStarter {
     /**
      * Entry point method.
      *

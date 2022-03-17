@@ -39,47 +39,12 @@ class BishopMoveStrategyTest {
     }
 
     @Test
-    void canBeMoved_piece_on_the_way_test() {
-        //given
-        int x1 = 0;
-        int y1 = 2;
-        int x2 = 1;
-        int y2 = 3;
-
-        //when
-        boolean actual = strategy.canBeMoved(x1, y1, x2, y2);
-
-        //then
-        Assertions.assertFalse(actual);
-    }
-
-    @Test
     void canBeMoved_no_piece_on_the_way_test() {
         //given
         Game game = Game.getInstance();
         Board board = game.getBoard();
         Piece[][] pieces = board.getPieces();
         pieces[1][3] = null;
-        int x1 = 0;
-        int y1 = 2;
-        int x2 = 1;
-        int y2 = 3;
-
-        //when
-        boolean actual = strategy.canBeMoved(x1, y1, x2, y2);
-        pieces[1][3] = new Piece(Color.WHITE, PieceType.PAWN);
-
-        //then
-        Assertions.assertTrue(actual);
-    }
-
-    @Test
-    void canBeMoved_kill_test() {
-        //given
-        Game game = Game.getInstance();
-        Board board = game.getBoard();
-        Piece[][] pieces = board.getPieces();
-        pieces[1][3] = new Piece(Color.BLACK, PieceType.PAWN);
         int x1 = 0;
         int y1 = 2;
         int x2 = 1;

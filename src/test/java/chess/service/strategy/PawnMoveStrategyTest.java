@@ -38,22 +38,7 @@ class PawnMoveStrategyTest {
     }
 
     @Test
-    void canBeMoved_one_cell_forward_logic_test() {
-        //given
-        int x1 = 1;
-        int y1 = 2;
-        int x2 = 2;
-        int y2 = 2;
-
-        //when
-        boolean actual = strategy.canBeMoved(x1, y1, x2, y2);
-
-        //then
-        Assertions.assertTrue(actual);
-    }
-
-    @Test
-    void canBeMoved_two_cell_forward_logic_test() {
+    void testCanBeMoved_two_cell_forward_logic_test() {
         //given
         int x1 = 1;
         int y1 = 2;
